@@ -211,8 +211,8 @@ class FontChangerWindow(QMainWindow):
 
     def _update_logo(self):
         is_dark = self._theme_mgr and self._theme_mgr.get_mode() == 'dark'
-        name = 'Kouprey_Transparancy-White.png' if is_dark else 'KoupreyTransparancy.png'
-        path = os.path.join(self._base, name)
+        name = 'Kouprey Logo Black.png' if is_dark else 'Kouprey Logo White.png'
+        path = os.path.join(self._base, 'assets', 'icons', name)
 
         if os.path.exists(path):
             pixmap = QPixmap(path)

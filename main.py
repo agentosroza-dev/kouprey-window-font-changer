@@ -6,7 +6,7 @@ os.environ['QT_ENABLE_HIGHDPI_SCALING'] = '1'
 os.environ['QT_AUTO_SCREEN_SCALE_FACTOR'] = '1'
 os.environ['QT_SCALE_FACTOR'] = '1'
 
-from PyQt6.QtGui import QFont, QIcon, QPixmap
+from PyQt6.QtGui import QFont, QIcon
 from PyQt6.QtWidgets import QApplication, QMessageBox
 from ui_main import FontChangerWindow
 from theme import ThemeManager
@@ -24,9 +24,9 @@ def main():
         msg.exec()
         return
 
-    icon_path = os.path.join(os.path.dirname(__file__), 'KoupreyTransparancy.png')
+    icon_path = os.path.join(os.path.dirname(__file__), 'assets', 'icons', 'Kouprey Logo White-icon.ico')
     if os.path.exists(icon_path):
-        app.setWindowIcon(QIcon(QPixmap(icon_path)))
+        app.setWindowIcon(QIcon(icon_path))
 
     app.setApplicationName('Kouprey-Window-Font-Changer')
     app.setOrganizationName('Kouprey')
